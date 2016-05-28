@@ -15,9 +15,6 @@ mkdir /config && mkdir /downloads && mkdir /music
 # download the latest headphones version to /headphones
 git clone https://github.com/rembo10/headphones.git
 
-# check for and modify the config for our container
-sh /setup/modify_config_for_container_env.sh
-
 # change the owner accordingly
 chown -R headphones:headphones /headphones /config /downloads /music
 
