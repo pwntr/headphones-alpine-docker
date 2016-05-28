@@ -7,7 +7,7 @@ apk update && apk upgrade
 apk add python git
 
 # add a non-root user and group called "nzbget" with no password, no home dir, no shell, and gid/uid set to 1000
-addgroup -g 1000 headphones && headphones -H -D -G nzbget -s /bin/false -u 1000 nzbget
+addgroup -g 1000 headphones && adduser -H -D headphones -G headphones -s /bin/false -u 1000
 
 # create the dirs and volume mount points
 mkdir /config && mkdir /downloads && mkdir /music
