@@ -15,8 +15,11 @@ mkdir /config && mkdir /downloads && mkdir /music
 # download the latest headphones version to /headphones
 git clone https://github.com/rembo10/headphones.git
 
+# add the first and currently only entry to our config file to accept requests from all IPs
+echo "http_host = 0.0.0.0" > /config/headphones.ini
+
 # change the owner accordingly
-chown -R headphones:headphones /headphones /config /downloads /music
+chown -R headphones:headphones /headphones /config /data /downloads /music
 
 # also, clear the apk cache:
 rm -rf /var/cache/apk/*

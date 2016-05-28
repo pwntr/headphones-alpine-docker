@@ -13,7 +13,7 @@ RUN chmod -v +x /setup/*.sh && sh /setup/setup.sh
 RUN rm -r /setup/
 
 # volume mappings
-VOLUME /config /downloads
+VOLUME /config /data /downloads /music
 
 # exposes headphone's default port
 EXPOSE 8181
@@ -22,4 +22,4 @@ EXPOSE 8181
 USER headphones
 
 # set some defaults and start nzbget in server and log mode
-ENTRYPOINT ["python", "/headphones/Headphones.py"]
+ENTRYPOINT ["python", "/headphones/Headphones.py", "--datadir", "/data", "--config", "/config/headphones.ini"]
