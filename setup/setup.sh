@@ -10,7 +10,7 @@ apk add python git
 addgroup -g 1000 headphones && adduser -H -D headphones -G headphones -s /bin/false -u 1000
 
 # create the dirs and volume mount points
-mkdir /config && mkdir /downloads && mkdir /music
+mkdir /config && mkdir /data && mkdir /downloads && mkdir /music
 
 # download the latest headphones version to /headphones
 git clone https://github.com/rembo10/headphones.git
